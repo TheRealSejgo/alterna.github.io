@@ -19,17 +19,37 @@
         <title>Alterna</title>
     </head>
     <body>
+        <script type="text/javascript">    
+            function whichButton(buttonElement){
+              var buttonClickedId = buttonElement.id;
+              if( buttonClickedId === 'btn1' ){
+                if(document.getElementById('ja-1').checked) {
+                    window.alert("Debug")
+                } else {
+                   window.alert("Fejl ikke alle svar var rigtigt")
+
+                }
+
+              }
+            }
+        </script>
+        <div id="error">
+            
+        </div>
         <div class="Quest1">
             <h1>Sprøgsmål 1</h1>
             <p>Er fisk et dyr</p>
-            <input id="toggle-on" name="toggle" type="radio">
-            <label for="toggle-on">Ja</label>
-            <input id="toggle-off" name="toggle" type="radio">
-            <label for="toggle-off">Nej</label>
+            <input id="ja-1" name="toggle" type="radio">
+            <label for="ja-1">Ja</label>
+            <input id="nej-1" name="toggle" type="radio">
+            <label for="nej-1">Nej</label>
         </div>
         <div class="Quest2">
             <h1>Sprøgsmål 2</h1>
             <p>Test</p>
+        </div>
+        <div class="svar">
+            <button id="btn1" onclick="whichButton(this)">Svar</button><br/>
         </div>
     </body>
 </html>
