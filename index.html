@@ -7,8 +7,14 @@
                 font-weight: bold;
                 color: rgba(0, 0, 0, 0.7);
             }
-            label {
+            span {
+                display: inline;
                 margin: left;
+            }
+            label {
+                margin: 10px;
+                display: inline; 
+                vertical-align: middle;
             }
             input[type=radio] {
                 padding: 0.5em;
@@ -87,32 +93,32 @@
         <div class="Quest2">
             <h1>Sprøgsmål 2</h1>
             <p>Hvor mange elever er der på alterna?</p>
-            <input id="2-40" name="quest2" type="radio">
             <label for="2-40"><span>40</span></label>
-            <input id="2-41" name="quest2" type="radio">
+            <input id="2-40" name="quest2" type="radio">
             <label for="2-41"><span>41</span></label>
-            <input id="2-42" name="quest2" type="radio">
+            <input id="2-41" name="quest2" type="radio">
             <label for="2-42"><span>42</span></label>
+            <input id="2-42" name="quest2" type="radio">
         </div>
         <div class="Quest3">
             <h1>Sprøgsmål 3</h1>
             <p>Hvor mange lever har et menneske</p>
-            <input id="3-1" name="quest3" type="radio">
             <label for="3-1"><span>1</span></label>
-            <input id="3-2" name="quest3" type="radio">
+            <input id="3-1" name="quest3" type="radio">
             <label for="3-2"><span>2</span></label>
-            <input id="3-3" name="quest3" type="radio">
+            <input id="3-2" name="quest3" type="radio">
             <label for="3-3"><span>3</span></label>
+            <input id="3-3" name="quest3" type="radio">
         </div>
         <div class="Quest4">
             <h1>Sprøgsmål 4</h1>
             <p>Hvem er den ældste elev på skolen?</p>
-            <input id="4-1" name="quest4" type="radio">
             <label for="4-1"><span>Samuel Thomsen</span></label>
-            <input id="4-2" name="quest4" type="radio">
+            <input id="4-1" name="quest4" type="radio">
             <label for="4-2"><span>Noa Marius Bräuner</span></label>
-            <input id="4-3" name="quest4" type="radio">
+            <input id="4-2" name="quest4" type="radio">
             <label for="4-3"><span>Mathias Samberg</span></label>
+            <input id="4-3" name="quest4" type="radio">
         </div>
         <div class="svar">
             <button id="btn1" onclick="whichButton(this)">Svar</button><br/>
