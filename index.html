@@ -1,33 +1,67 @@
 <html>
     <head>
         <style>
-            .quest1 h1{
+            body {
+                background: #fbfbfb;
+                font-family: Arial;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.7);
+            }
+            label {
+                margin: left;
+            }
+            input[type=radio] {
+                padding: 0.5em;
+                -webkit-appearance: none;
+                outline: 0.1em solid black;
+                outline-offset: 0.1em;
+                transform: scale(2);
+                margin-right: 1%;
+            }
+
+            input[type=radio]:checked {
+                display: inline-block;
+                background-color: #000;
+            }
+
+            h1{
                 border: 5px outset black;
                 text-align: center;
+                font-size: 400%;
             }
-            .quest1 p {
+            p{
                 text-align: left;
+                font-size: 300%;
+                position: relative;
+                vertical-align: middle;
             }
-            .quest2 h1{
-                border: 5px outset black;
-                text-align: center;
+            .svar {
+                position: fixed;
+                z-index: 100; 
+                bottom: 50; 
+                right: 0;
+                width: 100%;
             }
-            .quest2 p {
-                text-align: left;
+            .svar button {
+                display: block; 
+                margin: 0 auto;
+                width: 90px;
+                height: 40px;
             }
         </style>
         <title>Alterna</title>
     </head>
     <body>
-        <script type="text/javascript">    
+        <script type="text/javascript">  
             function whichButton(buttonElement){
               var buttonClickedId = buttonElement.id;
-              if( buttonClickedId === 'btn1' ){
-                if(document.getElementById('ja-1').checked) {
+              if( buttonClickedId === 'btn1'){
+                if(document.getElementById('1-24').checked && document.getElementById('2-41').checked 
+                && document.getElementById('3-1').checked && document.getElementById('4-2').checked) {
                     window.alert("Debug")
                 } else {
                    window.alert("Fejl ikke alle svar var rigtigt")
-
+                   location.reload();
                 }
 
               }
@@ -38,15 +72,47 @@
         </div>
         <div class="Quest1">
             <h1>Sprøgsmål 1</h1>
-            <p>Er fisk et dyr</p>
-            <input id="ja-1" name="toggle" type="radio">
-            <label for="ja-1">Ja</label>
-            <input id="nej-1" name="toggle" type="radio">
-            <label for="nej-1">Nej</label>
+            <p>Hvor gammel er bio?</p>
+            <label for="1-21"><span>21</span></label>
+            <input id="1-21" name="quest1" type="radio">
+            <label for="1-22"><span>22</span></label>
+            <input id="1-22" name="quest1" type="radio">
+            <label for="1-23"><span>23</span></label>
+            <input id="1-23" name="quest1" type="radio">
+            <label for="1-24"><span>24</span></label>
+            <input id="1-24" name="quest1" type="radio">
+            <label for="1-25"><span>25</span></label>
+            <input id="1-25" name="quest1" type="radio">
         </div>
         <div class="Quest2">
             <h1>Sprøgsmål 2</h1>
-            <p>Test</p>
+            <p>Hvor mange elever er der på alterna?</p>
+            <input id="2-40" name="quest2" type="radio">
+            <label for="2-40"><span>40</span></label>
+            <input id="2-41" name="quest2" type="radio">
+            <label for="2-41"><span>41</span></label>
+            <input id="2-42" name="quest2" type="radio">
+            <label for="2-42"><span>42</span></label>
+        </div>
+        <div class="Quest3">
+            <h1>Sprøgsmål 3</h1>
+            <p>Hvor mange lever har et menneske</p>
+            <input id="3-1" name="quest3" type="radio">
+            <label for="3-1"><span>1</span></label>
+            <input id="3-2" name="quest3" type="radio">
+            <label for="3-2"><span>2</span></label>
+            <input id="3-3" name="quest3" type="radio">
+            <label for="3-3"><span>3</span></label>
+        </div>
+        <div class="Quest4">
+            <h1>Sprøgsmål 4</h1>
+            <p>Hvem er den ældste elev på skolen?</p>
+            <input id="4-1" name="quest4" type="radio">
+            <label for="4-1"><span>Samuel Thomsen</span></label>
+            <input id="4-2" name="quest4" type="radio">
+            <label for="4-2"><span>Noa Marius Bräuner</span></label>
+            <input id="4-3" name="quest4" type="radio">
+            <label for="4-3"><span>Mathias Samberg</span></label>
         </div>
         <div class="svar">
             <button id="btn1" onclick="whichButton(this)">Svar</button><br/>
