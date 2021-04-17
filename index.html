@@ -63,8 +63,9 @@
               var buttonClickedId = buttonElement.id;
               if( buttonClickedId === 'btn1'){
                 if(document.getElementById('1-24').checked && document.getElementById('2-41').checked 
-                && document.getElementById('3-1').checked && document.getElementById('4-2').checked) {
-                    window.alert("Debug")
+                && document.getElementById('3-1').checked && document.getElementById('4-2').checked
+                && document.getElementById('5-2').checked) {
+                    location.href("https://therealsejgo.github.io/alterna.github.io/done.html")
                 } else {
                    window.alert("Fejl ikke alle svar var rigtigt")
                    location.reload();
@@ -73,9 +74,6 @@
               }
             }
         </script>
-        <div id="error">
-            
-        </div>
         <div class="Quest1">
             <h1>Sprøgsmål 1</h1>
             <p>Hvor gammel er bio?</p>
@@ -102,7 +100,7 @@
         </div>
         <div class="Quest3">
             <h1>Sprøgsmål 3</h1>
-            <p>Hvor mange lever har et menneske</p>
+            <p>Hvor mange lever har et menneske?</p>
             <label for="3-1"><span>1</span></label>
             <input id="3-1" name="quest3" type="radio">
             <label for="3-2"><span>2</span></label>
@@ -119,6 +117,16 @@
             <input id="4-2" name="quest4" type="radio">
             <label for="4-3"><span>Mathias Samberg</span></label>
             <input id="4-3" name="quest4" type="radio">
+        </div>
+        <div class="Quest5">
+            <h1>Sprøgsmål 5</h1>
+            <p>hvor mange kontinenter er der i verden?</p>
+            <label for="5-1"><span>6</span></label>
+            <input id="5-1" name="quest5" type="radio">
+            <label for="5-2"><span>7</span></label>
+            <input id="5-2" name="quest5" type="radio">
+            <label for="5-3"><span>8</span></label>
+            <input id="5-3" name="quest5" type="radio">
         </div>
         <div class="svar">
             <button id="btn1" onclick="whichButton(this)">Svar</button><br/>
